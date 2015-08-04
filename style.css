@@ -1,0 +1,1980 @@
+/*
+Theme Name: Klar til film
+Author: SmartMonkey
+Author URI: http://smartmonkey.dk
+Description: Klar til film custom tema, tegnet, tilrettelagt og opsat specifikt til Station Next i Faaborg af gutterne fra SmartMonkey. Send en mail til <a href="mailto:hej@smartmonkey.dk">tema@smartmonkey.dk</a>, hvis der er noget vi kan gøre for dig med hensyn til rettleser, tilføjelser eller udvidelser af dette tema. Temaet inkluderer alle sidevisninger på klartilfilm.dk. Temaet lader sig ikke nemt eksportere som framework til et andet hjemmesideprojekt. Men du skal være velkommen til at prøve. Absolutely no rights reserved. Kh SmartMonkey
+Version: 1.0.0
+Text Domain: SmartMonkey
+Klar til film WordPress Theme 2014 SmartMonkey
+*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font-size:100%;font:inherit;padding:0;border:0;margin:0;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}.clear{clear:both}
+.sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}
+
+.wrap-960{
+	width:960px;
+	margin:auto;
+	}
+	
+.wrap-920{
+	width:920px;
+	margin:auto;
+	}
+
+body{
+	background:#333;
+	z-index:1;
+	font-family:'arial';
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	}
+	
+div.page-content {
+background: rgba(255,255,255,.8);
+padding: 60px 0px;
+}
+
+.included-content section article>h1 {
+display: none;
+}
+	
+	
+h1,h2,h3{
+	font-family:'arial-black';
+	line-height:120%;
+	margin-bottom:10px;
+	}
+h1{font-size:40px;}
+h2{font-size:28px;}
+h3{font-size:25px;}
+
+p, .post-content{
+	font-family:'arial';
+	font-size:18px;
+	line-height:26px;
+	margin-bottom:10px;
+	}
+
+.page-dark, .page-dark h1, .page-dark h2, .page-dark h3, .page-dark p, page-dark .post-content{
+	color:#fff;
+	}
+
+strong{
+	font-family:'arial-black';
+	}
+	
+	
+article{
+	padding:20px;
+	}	
+article h1.article-title{
+	margin-bottom:30px;
+	}
+
+.hidden{
+	display:none;
+	}
+	
+img {
+width: 100%;
+}
+	
+	
+#video-container {
+transform:translate3d(0,0,0);
+-webkit-transform:translate3d(0,0,0);
+height:100%;
+min-height: 100%;
+min-width: 100%;
+z-index: -100000;
+position: fixed;
+ -webkit-filter: blur(5px); 
+ -moz-filter: blur(5px);
+ -ms-filter: blur(5px);
+ -o-filter: blur(5px);
+ filter: blur(5px);
+ filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+}
+
+#background-video{
+	transform:translate3d(0,0,0);
+	-webkit-transform:translate3d(0,0,0);
+	min-width:100%;
+	min-height:100%;
+	background:transparent;
+	}
+
+#background-cover{
+	transform:translate3d(0,0,0);
+	-webkit-transform:translate3d(0,0,0);
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background-color:#000;
+	background-image:url(http://klartilfilm.dk/wp-content/themes/klartilfilm/loaders/load-light.GIF);
+	background-position:center;
+	background-repeat:no-repeat;
+	z-index:0;
+	}
+	
+section{
+	display:block;
+	position:relative;
+	z-index:1;
+	overflow:auto;
+	}
+	
+
+#header {
+	display:block;
+	width: 100%;
+	height: 50px;
+	background-color: #000;
+	position: fixed;
+	left: 0;
+	top:-60px;
+	overflow:visible;
+	z-index:100000;
+	transition:.1s;
+	-webkit-transition:.1s;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	box-shadow:0px 2px 5px rgba(0,0,0,.2);
+	}
+
+.page #header, .single #header{
+	top:0px;
+	}
+	
+#header.shown {
+	top:0px;
+	}
+	
+#header #branding {
+	position:relative;
+	z-index:100000;
+	overflow:visible;
+	}
+
+
+#branding a{
+	position:relative;
+	z-index:100000;
+	color:#fff;
+	text-decoration:none;
+	}
+	
+#branding h1, #branding h2{
+	position:relative;
+	z-index:100000;
+	display:inline-block;
+	float:left;
+	}
+#branding h1 {
+	position: relative;
+	font-family: 'arial-black';
+	font-size: 25px;
+	text-decoration: none;
+	line-height: 50px;
+	margin-right: 10px;
+	margin-left: 20px;
+	text-transform: uppercase;
+	}
+
+#branding h2 {
+margin: 5px 0px 0px;
+line-height:50px;
+font-size: 14px;
+font-family: 'corbel';
+text-decoration: none;
+}
+
+/* Top menu */
+ul#menu-topbarens-menu {
+box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+}
+
+#top-menu {
+position: relative;
+float: right;
+height: 0px;
+overflow:hidden;
+top: 50px;
+right: -30px;
+transition:.3s;
+-webkit-transition:.3s;
+-ms-transition:.3s;
+}
+
+#top-menu.shown{
+	height:500px;
+	
+	}
+
+#top-menu a {
+	display: block;
+	width: 155px;
+	height: 48px;
+	line-height: 42px;
+	background-image: url(http://klartilfilm.dk/wp-content/uploads/2014/04/film_strip.png);
+	color: #fff;
+	font-family: 'arial';
+	text-align: center;
+	font-size: 14px;
+	background-color: rgba(55,55,55,0.9);
+	}
+
+#top-menu-expand {
+position: fixed;
+display: block;
+background: url(http://klartilfilm.dk/wp-content/uploads/2014/04/menu-snippet1.png);
+width: 177px;
+height: 114px;
+margin-left: -23px;
+cursor:pointer;
+}
+
+#top-menu-expand {
+position: relative;
+float: right;
+margin-right: 20px;
+display: block;
+background-color: #000;
+background-image: url(http://klartilfilm.dk/wp-content/uploads/2014/04/menu.png);
+width: 55px;
+background-repeat: no-repeat;
+background-position: center;
+height: 50px;
+cursor: pointer;
+}
+
+
+#roll-nav {
+	position: absolute;
+	width: 570px;
+	height: 580px;
+	border: 2px solid rgba(255,255,255,0.5);
+	border-radius: 580px;
+	-webkit-border-radius: 580px;
+	margin: 0px auto;
+	background: rgba(0,0,0,0.1);
+	}
+
+#front-page{
+	overflow:hidden;
+	}	
+
+#om{
+	min-height:300px;
+	padding:40px 0px 100px;
+	background-color:rgba(0,0,0,.8);
+	color:#fff;
+	}
+
+#filmgalleri{
+	min-height:300px;
+	padding:40px 0px 100px;
+	background-color:rgba(51,51,51,.8);
+	}
+
+#billeder{
+	min-height:300px;
+	padding:40px 0px 100px;
+	background-color:rgba(255,255,255,.8);
+	}
+	
+#kalender{
+	min-height:300px;
+	padding:40px 0px 100px;
+	background-color:#333;
+	}
+
+#undervisere{
+	min-height:300px;
+	padding:40px 0px 100px;
+	background-color:rgba(153,153,153,.8);
+	}
+
+#kontakt{
+	min-height:300px;
+	padding:40px 0px 100px;
+	background-color:rgba(255,255,255,.8);
+	}
+	
+#menu-forsidens-menu a {
+	display: block;
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	text-align: center;
+	position: absolute;
+	background: rgba(255,255,255,0.5);
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1) inset;
+	margin: 215px 210px;
+	color: transparent;
+	font-size: 30px;
+	font-family: 'arial-black';
+	text-decoration: none;
+	transition:.5s;
+	-webkit-transition:.5s;
+	}
+#menu-forsidens-menu a.translate{
+	color:#fff;
+	}
+	
+#menu-forsidens-menu a:hover {
+	background: rgba(255,255,255,.8);
+	color:#333;
+	}
+
+#menu-forsidens-menu li:nth-child(1) a.translate{
+	transform: translate(0px,-200px);
+	-webkit-transform: translate(0px,-200px);
+	}
+	
+#menu-forsidens-menu li:nth-child(2) a.translate{
+	transform: rotate(60deg) translate(0px,-200px) rotate(-60deg);
+	-webkit-transform: rotate(60deg) translate(0px,-200px) rotate(-60deg);
+	}
+	
+#menu-forsidens-menu li:nth-child(3) a.translate{
+	transform: rotate(120deg) translate(0px,-200px) rotate(-120deg);
+	-webkit-transform: rotate(120deg) translate(0px,-200px) rotate(-120deg);
+	}
+	
+#menu-forsidens-menu li:nth-child(4) a.translate{
+	transform: translate(0px,200px);
+	-webkit-transform: translate(0px,200px);
+	}
+	
+#menu-forsidens-menu li:nth-child(5) a.translate{
+	transform: rotate(240deg) translate(0px,-200px) rotate(-240deg);
+	-webkit-transform: rotate(240deg) translate(0px,-200px) rotate(-240deg);
+	}
+
+#menu-forsidens-menu li:nth-child(6) a.translate{
+	transform: rotate(300deg) translate(0px,-200px) rotate(-300deg);
+	-webkit-transform: rotate(300deg) translate(0px,-200px) rotate(-300deg);
+	}
+	
+	
+#roll-nav-title {
+	display: block;
+	font-size: 45px;
+	font-family: 'arial-black';
+	color: #fff;
+	width: 225px;
+	text-align: center;
+	height: 90px;
+	margin: 220px auto 0px;
+	position: relative;
+	text-transform: uppercase;
+	}
+	
+#roll-nav-description {
+display: block;
+color: #fff;
+font-family: 'corbel';
+ont-size: 18px;
+line-height: 16px;
+text-align: center;
+width: 140px;
+margin: 10px auto 0px;
+}
+
+/* FEED */
+div.about-main>h2{
+	margin-bottom:20px;
+	}
+
+div.about-main>div{
+	width: 460px;
+	display: inline-block;
+	float: left;
+	margin-top: 20px;
+	}
+	
+div.about-main img{
+	width:100%;
+	}
+	
+div.about-main div.about-main-right {
+	width: 420px;
+	margin-left: 40px;
+	height: 300px;
+	}
+
+
+
+div#first-news {
+width: 640px;
+float: left;
+overflow: auto;
+}
+article.lcp_full {
+padding: 20px 40px 20px 20px;
+}
+
+h1.lcp_full_title a {
+text-decoration: none;
+color: #fff;
+margin-bottom: 10px;
+display: block;
+}
+
+div.lcp_full_img {
+background-image: url(http://klartilfilm.dk/wp-content/themes/klartilfilm/loaders/load-light.GIF);
+background-position:center center;
+background-repeat:no-repeat;
+width: 100%;
+/*height: 235px;*/
+height:auto;
+/*overflow: hidden;*/
+margin-bottom:10px;
+margin-top: 15px;
+}
+
+img.attachment-full.wp-post-image, div.lcp_full_img img {
+width: 100%;
+height: auto;
+}
+
+/*-- Side
+*/
+div#next-3-news {
+overflow: auto;
+display: inline-block;
+float: left;
+width: 300px;
+margin-top: 17px;
+}
+
+ul.lcp_side {
+width: 320px;
+float: right;
+}
+
+li.side-entry{
+padding: 10px 0px;
+}
+
+h4.lcp_side_title a, h4.lcp_bottom_title a {
+color: #fff;
+text-decoration: none;
+font-family: 'arial-black';
+font-size: 20px;
+display: block;
+margin-bottom: 5px;
+height:40px;
+}
+
+div.lcp_side_img, div.lcp_bottom_img {
+width: 100%;
+height: 128px;
+overflow: hidden;
+display: block;
+margin-bottom: 5px;
+}
+
+p.lcp_side_excerpt, p.lcp_bottom_excerpt {
+font-size: 14px;
+line-height: 20px;
+margin-bottom: 0px;
+}
+
+ul.lcp_side {
+width: 280px;
+float: right;
+margin-top: 43px;
+}
+
+/*-- bund
+*/
+
+div#hidden-news{
+	display:none;
+	}
+
+div#more-news {
+clear: both;
+width: 920px;
+text-align: center;
+height: 60px;
+display: block;
+margin: 30px auto 10px;
+font-size: 20px;
+font-family: 'arial';
+color: #fff;
+background-color: rgba(0,0,0,.8);
+line-height: 60px;
+border-radius: 5px;
+box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+cursor: pointer;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+#all-news{
+	clear:both;
+	padding-top: 60px;
+	}
+	
+ul.lcp_bottom {
+width: 960px;
+margin-top: 10px;
+margin-left: -20px;
+}
+
+li.bottom-entry {
+	width: 280px;
+	margin: 20px;
+	display: inline-block;
+	vertical-align: top;
+	float: left;
+	height: 310px;
+	border-bottom: 1px solid #666;
+	}
+/* FILM */
+
+#mov-expand {
+height:60px;
+display: block;
+width: 920px;
+margin: 20px auto 0px;
+text-align: center;
+font-size: 20px;
+font-family: 'arial';
+color: #fff;
+background-color: rgba(0,0,0,.8);
+line-height:60px;
+border-radius: 5px;
+box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+cursor: pointer;
+background-position:center;
+background-repeat:no-repeat;
+
+}
+
+#thumbs {
+display: block;
+padding: 10px;
+overflow: auto;
+clear:both;
+}
+
+#thumbs > ul > li {
+display: inline-block;
+float: left;
+width: 290px;
+height: 160px;
+padding: 10px;
+overflow: hidden;
+opacity: 1;
+transition: .2s;
+-webkit-transition: .2s;
+}
+
+
+#thumbs > ul > li.hidden {
+	width:0px;
+	height:0px;
+	opacity:0;
+	padding:0px;
+	}
+
+#thumbs > ul > li.hidden .image-overlay{
+	display:none;
+	}
+
+#thumbs > ul > li > a {
+width: 280px;
+height: 158px;
+display: block;
+padding: 5px;
+margin: 0px;
+background: rgba(0,0,0,.5);
+}
+
+#thumbs > ul > li> a > .image {
+display: block;
+width: 280px;
+height: 171px;
+overflow: hidden;
+}
+
+#thumbs > ul > li > a > .image > img {
+width: 101%;
+margin-top: -1px;
+}
+
+#thumbs > ul > li > a > span.video-title {
+display: block;
+width: 260px;
+height: 15px;
+padding: 10px 10px;
+font-size: 15px;
+line-height: 15px;
+color: #FFF;
+font-family: 'corbel';
+margin-top: -171px;
+margin-left: 0px;
+position: absolute;
+background: rgba(0,0,0,0.5);
+}
+
+#embed {
+	margin: 20px 20px 0px;
+	background-color: rgba(0,0,0,0.7);
+	background-image:url(http://klartilfilm.dk/wp-content/themes/klartilfilm/loaders/load-light.GIF);
+	background-position:center;
+	background-repeat:no-repeat;
+	width: 920px;
+	margin: auto;
+}
+
+#embed>iframe{
+	margin:10px;
+	}
+
+#meta {
+display: block;
+width: 920px;
+height: 0px;
+background: rgba(0,0,0,0.5);
+margin: 10px 20px 20px;
+overflow:hidden;
+}
+
+.noshow{
+	margin:0px!important;
+	}
+
+
+#meta-kolofon {
+display: inline-block;
+float: left;
+background: rgba(255,255,255,.8);
+width: 285px;
+height:auto;
+margin: 10px;
+}
+
+#meta-description {
+display: inline-block;
+float: left;
+background: rgba(255,255,255,.8);
+width: 595px;
+height:auto;
+margin: 10px;
+}
+
+#meta-description > h2 {
+color: #333;
+margin: 20px 20px 0px;
+font-size: 20px;
+}
+
+
+#meta-description > p {
+margin: 5px 20px 10px;
+color: #333;
+}	
+	
+#thumbs > ul > li > a > span.image-overlay {
+display: block;
+position: absolute;
+background-image: url('http://klartilfilm.dk/wp-content/uploads/2014/03/play-70.png');
+background-position: center;
+background-repeat: no-repeat;
+width: 280px;
+height: 170px;
+margin-top: -170px;
+transition: .3s;
+-webkit-transition: .3s;
+}
+
+#filmgalleri .image-overlay:hover {
+	background-image: url('http://klartilfilm.dk/wp-content/uploads/2014/03/play-95.png');
+	}
+	
+	
+/* PLIST */
+div.plist-head {
+display: block;
+background: rgba(5,5,5,.5);
+overflow: hidden;
+}
+
+.plist-head a.image-overlay, a.pl-image-overlay {
+display: block;
+position: absolute;
+background-color:rgba(55,55,55,.5);
+background-image: url('http://klartilfilm.dk/wp-content/uploads/2014/03/play-70.png');
+background-position: center;
+background-repeat: no-repeat;
+width: 220px;
+height: 124px;
+transition: .3s;
+-webkit-transition: .3s;
+text-align: center;
+line-height: 190px;
+text-decoration: none;
+color: #ddd;
+font-family: 'arial';
+text-transform: uppercase;
+}
+
+
+div.plist-thumb {
+display: inline-block;
+width: 220px;
+height: 124px;
+overflow: hidden;
+float: left;
+}
+
+div.plist-img {
+width:100%;
+}
+
+div.plist-title {
+display: inline-block;
+width: 670px;
+vertical-align: top;
+font-family: 'arial-black';
+font-size: 20px;
+padding: 10px;
+}
+
+div.plist-desc {
+display: inline-block;
+width: 670px;
+font-family: 'arial';
+font-size: 15px;
+line-height: 20px;
+padding: 5px 10px;
+}
+	
+div.yt-plist {
+width: 920px;
+margin: 10px auto;
+}
+
+ul.plist-videos {
+display: block;
+clear: both;
+width: 920px;
+margin: auto;
+overflow: auto;
+background: rgba(5,5,5,.5);
+margin-bottom: 15px;
+}
+
+ul.plist-videos li {
+display: inline-block;
+float: left;
+width: 220px;
+height: 129px;
+overflow: hidden;
+padding: 5px;
+background: rgba(5,5,5,.5);
+}
+	
+ul.plist-videos li img.thumb {
+width: 100%;
+}
+.plist-videos span.image-overlay {
+display: block;
+position: absolute;
+background-image: url('http://www.klartilfilm.dk/wp-content/uploads/2014/03/play-70.png');
+background-position: center;
+background-repeat: no-repeat;
+width: 219px;
+height: 120px;
+margin-top: -125px;
+transition: .3s;
+-webkit-transition: .3s;
+}
+
+.plist-videos span.video-title {
+display: block;
+width: 200px;
+height: 15px;
+padding: 10px 10px;
+font-size: 15px;
+line-height: 15px;
+color: #FFF;
+font-family: 'corbel';
+margin-top: -131px;
+margin-left: 0px;
+position: absolute;
+background: rgba(0,0,0,0.5);
+}
+
+/* KALENDER */
+
+#cal-top-3 {
+margin-top: 20px;
+}
+
+#cal-expand {
+height:60px;
+display: block;
+width: 920px;
+margin: 20px auto 0px;
+text-align: center;
+font-size: 20px;
+font-family: 'arial';
+color: #fff;
+background-color: rgba(0,0,0,.8);
+line-height:60px;
+border-radius: 5px;
+box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+cursor: pointer;
+background-position:center;
+background-repeat:no-repeat;
+
+}
+
+span.cal-print {
+	display: inline-block;
+	width: 35px;
+	height: 30px;
+	vertical-align: middle;
+	margin-left: 10px;
+	opacity: 0.5;
+	-webkit-transition: .2s;
+	transition: .2s;
+	cursor: pointer;
+	background-image:url(http://www.klartilfilm.dk/wp-content/uploads/2014/05/print_icon.png);
+	background-position:center center;
+	background-repeat:no-repeat;
+	}
+
+span.cal-print:hover{
+	opacity:.9;
+	}
+
+div.cal-entry {
+display: block;
+padding: 10px 0px;
+overflow: auto;
+}
+
+div.cal-entry>div{
+	display:inline-block;
+	float:left;
+	vertical-align:top;
+	box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+	}
+	
+	
+div.date-box {
+text-align: center;
+width: 100px;
+height: 100px;
+background: #efefef;
+line-height: 1;
+}
+
+div.date-box > span.dname {
+display: block;
+font-family: arial-black;
+font-size: 23px;
+margin: 30px auto 5px;
+text-transform: uppercase;
+}
+	
+div.date-box > span.dnum {
+	font-family:'arial';
+	display: inline-block;
+}
+	
+div.date-box > span.mname {
+display: inline-block;
+font-family:'arial';
+text-transform:uppercase;
+}
+
+div.img-box {
+height: 100px;
+width: 177px;
+margin-left: 20px;
+text-align: center;
+font-family: 'arial';
+overflow:hidden;
+background-image:url(http://klartilfilm.dk/wp-content/uploads/2014/03/calendar.jpg);
+background-position:center;
+background-repeat:no-repeat;
+}
+
+div.img-box img{
+	width:100%;
+	height:auto;
+	}
+
+div.title-box {
+	cursor: pointer;
+	height: 100px;
+	background: #efefef;
+	width: 580px;
+	margin-left: 20px;
+	padding-left: 20px;
+}
+
+div.title-box h4 {
+margin-top: 25px;
+font-size: 25px;
+font-family: 'arial';
+margin-bottom: 5px;
+}
+
+span.desc-meta {
+display: inline-block;
+vertical-align:top;
+}
+
+div.title-box span{
+	font-size: 15px;
+	font-family: 'arial';
+	}
+	
+div.cal-entry>div.descr-box {
+display: inline-block;
+clear: both;
+float: right;
+width: 558px;
+margin: 20px 4px 0px 340px;
+padding: 20px;
+background: #efefef;
+display: none;
+}
+
+div.title-box > span.title-exp-ind {
+position: absolute;
+display: block;
+height: 20px;
+width: 20px;
+background-image: url(http://klartilfilm.dk/wp-content/uploads/2014/03/updwn.png);
+background-position:0px -20px;
+background-repeat:no-repeat;
+background-size:20px;
+margin-left: 510px;
+margin-top: -25px;
+opacity:0;
+transition:.2s;
+-webkit-transition:.2s;
+}
+
+
+div.title-box:hover > span.title-exp-ind {
+	opacity:1;
+	}
+	
+
+div.title-box.expanded > span.title-exp-ind {
+	opacity:1;
+	background-position:0px 0px;
+	}
+
+
+
+
+
+
+
+
+/* BILLEDER */
+
+#billeder div.wrap-940 {
+overflow: auto;
+padding: 20px;
+}
+
+#billeder div.facebook-album-container {
+	display: inline-block;
+	float: left;
+	width: 306px;
+	height: 169px;
+	overflow: hidden;
+	margin-bottom: 5px;
+	}
+
+
+#billeder div.facebook-album-wrapper {
+	position: absolute;
+	width: 300px;
+	height: 169px;
+	display:none;
+	}
+	
+#billeder div.facebook-album-wrapper:nth-child(2) {
+display: block;
+}
+
+#billeder .fbalbum .image {
+	box-shadow: none!important;
+	}
+
+#billeder a.fbalbum.cboxElement, #billeder .fbalbum .size-4 {
+width: 300px;
+height: 169px;
+}
+
+#cboxOverlay {
+background: transparent!IMPORTANT;
+}
+
+div.facebook-album-container>h2 {
+position: absolute;
+display: block;
+z-index: 2;
+font-size: 14px;
+width: 280px;
+padding: 10px 10px;
+background: rgba(0,0,0,0.4);
+font-family: 'corbel';
+margin-left: 2px;
+height: 16px;
+overflow: hidden;
+line-height: 20px;
+}
+
+div.facebook-album-container>h2 a{
+color: #fff;
+text-decoration: none;
+}
+
+
+
+#billeder-result .loading{
+	width:100%;
+	height:300px;
+	background-image:url(http://klartilfilm.dk/wp-content/themes/klartilfilm/loaders/load-dark.GIF);
+	background-position:center center;
+	background-repeat:no-repeat;
+	}
+
+
+
+/* Undervisere*/
+#undervisere article>h1{
+	margin-bottom:30px;
+	}
+
+.u-cont {
+	display: inline-block;
+	float: left;
+	width: 280px;
+	overflow: hidden;
+	margin: 0px 40px 30px 0px;
+	text-decoration:none;
+	cursor:default;
+	}
+
+.u-cont.third{
+	margin: 0px 0px 10px 0px;
+	}
+
+.u-pic {
+	width: 270px;
+	height: 270px;
+	overflow: hidden;
+	background-image: url(http://klartilfilm.dk/wp-content/uploads/2014/04/teacher.jpg);
+	}
+
+.u-pic img{
+	width:100%;
+	height:auto;
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	}
+
+.u-name{
+	margin:20px 0px 5px;
+	font-family:'arial-black';
+	color:#fff;
+	font-size:18px;
+	text-decoration:none;
+	}
+.u-desc{
+	font-size:18px;
+	line-height:24px;
+	color:#fff;
+	text-decoration:none;
+	font-family:'arial';
+	}
+	
+/* Newsbreaker */
+
+@keyframes blink{
+	0%{opacity:0;}
+	50%{opacity:1;}
+	100%{opacity:0;}
+	}
+
+@-webkit-keyframes blink{
+	0%{opacity:0;}
+	50%{opacity:1;}
+	100%{opacity:0;}
+	}
+
+body{
+	background:#333;
+	}
+	
+.breaking-news {
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	background: rgba(0,0,0,.9);
+	width: 100%;
+	left: 0;
+	height: 30px;
+	padding-top: 10px;
+	z-index: 1200;
+	transform:translate3d(0,0,0);
+	-webkit-transform:translate3d(0,0,0);
+	display:none;
+	}
+
+span.exclm {
+	opacity: 0;
+	vertical-align: top;
+	display: inline-block;
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
+	color: #fff;
+	text-align: center;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-family: 'arial';
+	}
+
+span.exclm.blinking{
+	animation:infinite linear .1s blink;
+	-webkit-animation:infinite linear .1s blink;
+	}
+
+span.exclm.shown{
+	opacity:1;
+	}
+
+span.news-title {
+	position:relative;
+	vertical-align: text-bottom;
+	display: inline-block;
+	width:0px;
+	height:40px;
+	overflow:hidden;
+	}
+
+span.news-title span {
+	position: absolute;
+	height: 20px;
+	width: 900px;
+	overflow: visible;
+	left: 0px;
+	text-align: left;
+	margin-top: 2px;
+	}
+
+span.news-title h3 {
+display: inline-block;
+color: #fff;
+height: 15px;
+line-height: 15px;
+font-size: 15px;
+margin: 0px 0px;
+font-family: 'arial';
+padding: 0px 5px;
+}
+
+span.news-title a {
+	text-decoration: none;
+	color: #fff;
+	}
+	
+.breaking-ctrl {
+	display:block;
+	width: 50px;
+	height: 30px;
+	margin-top: -10px;
+	position: absolute;
+	cursor: pointer;
+	transition: .2s;
+	-webkit-transition: .2s;
+	color: #fff;
+	text-align: center;
+	padding-top: 10px;
+	text-decoration:none;
+	}
+
+.breaking-ctrl:hover {
+	color:#000;
+	background:rgba(255,255,255,.6);
+	}
+
+
+	
+div.breaking-ctrl.breaking-close {
+	right: 0;
+	}
+div.breaking-ctrl.breaking-close:before {
+content: "\f335";
+font: normal 25px/1 'dashicons';
+}
+	
+.breaking-ctrl.breaking-read {
+right: 50px;
+}
+.breaking-ctrl.breaking-read:before {
+content: "\f139";
+font: normal 25px/1 'dashicons';
+}	
+	
+/* FOOTER */
+	
+#kontakt > div > article > div.footer-widget {
+	display: inline-block;
+	float: left;
+	width: 50%;
+	margin-top: 20px;
+	}
+	
+#kontakt > div > article > div.footer-widget.footer-right-widget > div > a {
+	display: inline-block;
+	margin: 20px 0px 0px 50px;
+	}
+	
+@media(max-width:960px){
+	
+	/* HEADER */
+	#header.shown, #header{
+	top: 0px;
+	}
+	
+	.wrap-960{
+		width:640px;
+		}
+	
+	.wrap-920{
+		width:600px;
+		}
+	
+	#mov-expand, #cal-expand {
+		width:600px;
+		}
+	
+	#billeder div.wrap-940 {
+		overflow: auto;
+		padding: 17px;
+		width: 620px;
+		}
+	
+	
+	/* ROLL NAV */
+	
+	#roll-nav {
+	position: absolute;
+	width: 440px;
+	height: 440px;
+	border: 2px solid rgba(255,255,255,0.5);
+	border-radius: 440px;
+	-webkit-border-radius: 440px;
+	margin: 0px auto;
+	background: rgba(0,0,0,0.1);
+	}
+	
+	#roll-nav-title {
+	display: block;
+	font-size: 32px;
+	font-family: 'arial-black';
+	color: #fff;
+	width: 155px;
+	text-align: center;
+	height: 60px;
+	margin: 160px auto 0px;
+	position: relative;
+	}
+	
+	#menu-forsidens-menu a {
+	display: block;
+	width: 130px;
+	height: 130px;
+	line-height: 130px;
+	border-radius: 130px;
+	-webkit-border-radius: 100px;
+	text-align: center;
+	position: absolute;
+	background: rgba(255,255,255,0.5);
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1) inset;
+	margin: 155px 155px;
+	color: transparent;
+	font-size: 25px;
+	font-family: 'arial-black';
+	text-decoration: none;
+	transition: .5s;
+	-webkit-transition: .5s;
+	}
+	
+	#menu-forsidens-menu li:nth-child(1) a.translate{
+	transform: translate(0px,-150px);
+	-webkit-transform: translate(0px,-150px);
+	}
+	
+	#menu-forsidens-menu li:nth-child(2) a.translate{
+	transform: rotate(60deg) translate(0px,-150px) rotate(-60deg);
+	-webkit-transform: rotate(60deg) translate(0px,-150px) rotate(-60deg);
+	}
+	
+	#menu-forsidens-menu li:nth-child(3) a.translate{
+	transform: rotate(120deg) translate(0px,-150px) rotate(-120deg);
+	-webkit-transform: rotate(120deg) translate(0px,-150px) rotate(-120deg);
+	}
+	
+	#menu-forsidens-menu li:nth-child(4) a.translate{
+	transform: translate(0px,150px);
+	-webkit-transform: translate(0px,150px);
+	}
+	
+	#menu-forsidens-menu li:nth-child(5) a.translate{
+	transform: rotate(240deg) translate(0px,-150px) rotate(-240deg);
+	-webkit-transform: rotate(240deg) translate(0px,-150px) rotate(-240deg);
+	}
+
+	#menu-forsidens-menu li:nth-child(6) a.translate{
+	transform: rotate(300deg) translate(0px,-150px) rotate(-300deg);
+	-webkit-transform: rotate(300deg) translate(0px,-150px) rotate(-300deg);
+	}
+	
+	
+	/* 	FEEED */
+	
+	div.about-main div.about-main-left, div.about-main div.about-main-right {
+	width: 100%!important;
+	margin-left: 0px;
+	height: 370px;
+	}
+	
+	ul.lcp_bottom {
+	width: 640px;
+	}
+	
+	div#more-news {
+	width: 610px;
+	}
+	
+	
+	div#next-3-news {
+	width: 640px;
+	}
+	
+	/* VIDEO */
+	
+	#filmgalleri div.yt-plist {
+	width: 600px;
+	}
+	
+	#filmgalleri div.plist-title {
+	width: 580px;
+	}
+	
+	#filmgalleri ul.plist-videos {
+	width: 600px;
+	}
+	
+	#filmgalleri ul.plist-videos li {
+	width: 290px;
+	height: 159px;
+	}
+	
+	#filmgalleri .plist-videos span.image-overlay {
+	width: 290px;
+	height: 159px;
+	margin-top: -159px;
+	}
+	
+	#filmgalleri .plist-videos span.video-title {
+	width: 270px;
+	height: 15px;
+	padding: 10px 10px;
+	color: #FFF;
+	margin-top: -166px;
+	position: absolute;
+	}
+	
+	/* KALENDER */
+	
+	p, .post-content {
+	font-family: 'arial';
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 10px;
+	}
+	
+	div.date-box {
+	text-align: center;
+	width: 70px;
+	height: 70px;
+	background: #efefef;
+	line-height: 1;
+	}
+	
+	div.date-box > span.dname {
+	display: block;
+	font-family: arial-black;
+	font-size: 18px;
+	margin: 18px auto 3px;
+	text-transform: uppercase;
+	}
+	
+	div.img-box {
+	height: 70px;
+	width: 125px;
+	margin-left: 10px;
+	text-align: center;
+	font-family: 'arial';
+	overflow: hidden;
+	background-image: url(http://klartilfilm.dk/wp-content/uploads/2014/03/calendar.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	}
+	
+	div.title-box {
+	cursor: pointer;
+	height: 70px;
+	background: #efefef;
+	width: 360px;
+	margin-left: 10px;
+	padding-left: 20px;
+	}
+	
+	div.title-box h4 {
+	margin-top: 15px;
+	font-size: 20px;
+	font-family: 'arial';
+	}
+	
+	div.title-box > span.title-exp-ind {
+	position: absolute;
+	display: block;
+	height: 20px;
+	width: 20px;
+	background-image: url(http://klartilfilm.dk/wp-content/uploads/2014/03/updwn.png);
+	background-position: 0px -20px;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	margin-left: 330px;
+	margin-top: -25px;
+	opacity: 0;
+	transition: .2s;
+	-webkit-transition: .2s;
+	}
+	
+	div.cal-entry>div.descr-box {
+	display: inline-block;
+	clear: both;
+	float: right;
+	width: 558px;
+	margin: 10px 4px 0px 340px;
+	padding: 20px;
+	background: #efefef;
+	display: none;
+	}
+	
+	/* UNDERVISERE */
+	
+	.u-cont {
+		width: 170px;
+		}
+	
+	.u-pic {
+		width: 170px;
+		height: 170px;
+		}
+		
+	/* KONTAKT */
+	div.footer-widget.footer-right-widget {
+	position: absolute;
+	margin-left: 320px;
+	top: 20px;
+	}
+	
+	
+	}
+	
+@media(max-width:640px){
+	img#background-video{
+		min-height: 0px;
+		height: auto;
+		min-width: 0px;
+		width: 890px;
+		}
+	
+	.wrap-960 {
+	width: 320px;
+	}
+	
+	div.wrap-920 {
+	width: 300px;
+	}
+	
+	article h1.article-title {
+		margin-bottom: 10px;
+		}
+		
+	h1{font-size:25px;}
+	h2{font-size:15px;}
+	h3{font-size:13px;}
+	p, .post-content {
+	font-family: 'arial';
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 10px;
+	}
+	
+	
+	/* Sektioner */
+	
+	#om {
+		min-height: 300px;
+		padding: 20px 0px 50px;
+		}
+		
+	#filmgalleri{
+		min-height:300px;
+		padding: 20px 0px 50px;
+		background-color:rgba(51,51,51,.8);
+		}
+
+	#billeder{
+		min-height:300px;
+		padding: 20px 0px 50px;
+		background-color:rgba(255,255,255,.8);
+		}
+		
+	#kalender{
+		min-height:300px;
+		padding: 20px 0px 50px;
+		background-color:#333;
+		}
+	
+	#undervisere{
+		min-height:300px;
+		padding: 20px 0px 50px;
+		background-color:rgba(153,153,153,.8);
+		}
+	
+	#kontakt{
+		min-height:300px;
+		padding: 20px 0px 50px;
+		background-color:rgba(255,255,255,.8);
+		}
+	
+	/* HEADER */
+	#header.shown, #header{
+	top: 0px;
+	}
+	
+	
+	#branding h1{
+		font-size:15px;
+		}
+	
+	#branding h2 {
+	display:none;
+	}
+	
+	#top-menu-expand {
+	margin-right: 10px;
+	}
+	
+	/* Filmrulle */
+	
+	#roll-nav {
+	position: absolute;
+	width: 270px;
+	height: 270px;
+	border: 2px solid rgba(255,255,255,0.5);
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	margin: 0px auto;
+	background: rgba(0,0,0,0.1);
+	}
+	
+	
+	#menu-forsidens-menu a {
+	display: block;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	border-radius: 80px;
+	-webkit-border-radius: 80px;
+	text-align: center;
+	position: absolute;
+	background: rgba(255,255,255,0.5);
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1) inset;
+	margin: 95px 95px;
+	color: transparent;
+	font-size: 16px;
+	font-family: 'arial-black';
+	text-decoration: none;
+	transition: .5s;
+	-webkit-transition: .5s;
+	}
+	
+#menu-forsidens-menu a.translate{
+	color:#fff;
+	}
+	
+#menu-forsidens-menu a:hover {
+	background: rgba(255,255,255,.8);
+	color:#333;
+	}
+
+#menu-forsidens-menu li:nth-child(1) a.translate{
+	transform: translate(0px,-90px);
+	-webkit-transform: translate(0px,-90px);
+	}
+	
+#menu-forsidens-menu li:nth-child(2) a.translate{
+	transform: rotate(60deg) translate(0px,-90px) rotate(-60deg);
+	-webkit-transform: rotate(60deg) translate(0px,-90px) rotate(-60deg);
+	}
+	
+#menu-forsidens-menu li:nth-child(3) a.translate{
+	transform: rotate(120deg) translate(0px,-90px) rotate(-120deg);
+	-webkit-transform: rotate(120deg) translate(0px,-90px) rotate(-120deg);
+	}
+	
+#menu-forsidens-menu li:nth-child(4) a.translate{
+	transform: translate(0px,90px);
+	-webkit-transform: translate(0px,90px);
+	}
+	
+#menu-forsidens-menu li:nth-child(5) a.translate{
+	transform: rotate(240deg) translate(0px,-90px) rotate(-240deg);
+	-webkit-transform: rotate(240deg) translate(0px,-90px) rotate(-240deg);
+	}
+
+#menu-forsidens-menu li:nth-child(6) a.translate{
+	transform: rotate(300deg) translate(0px,-90px) rotate(-300deg);
+	-webkit-transform: rotate(300deg) translate(0px,-90px) rotate(-300deg);
+	}
+	
+	
+#roll-nav-title {
+display: block;
+font-size: 20px;
+font-family: 'arial-black';
+color: #fff;
+width: 89px;
+text-align: center;
+height: 35px;
+margin: 97px auto 0px;
+position: relative;
+}
+	
+#roll-nav-description {
+display: block;
+color: #fff;
+font-family: 'corbel';
+font-size: 12px;
+line-height: 16px;
+text-align: center;
+width: 110px;
+margin: 5px auto 0px;
+}
+
+
+
+	/* FEED */
+	div.about-main div.about-main-right{
+	height: 200px;
+	}
+	div#first-news {
+	width: 280px;
+	float: none;
+	overflow: auto;
+	margin: auto;
+	margin-top: 40px;
+	}
+	
+	div#first-news article.lcp_full {
+	padding: 0;
+	}
+	
+	#all-news {
+	padding-top: 20px;
+	}
+	
+	ul.lcp_bottom {
+	width: 320px;
+	margin-left:-10px;
+	}
+	
+	li.bottom-entry {
+	margin: 20px 20px 20px;
+	height: 290px;
+	}
+	
+	div#more-news {
+	width: 290px;
+	}
+	
+	div#next-3-news {
+	width: 300px;
+	}
+
+
+#kontakt > div > article > div.footer-widget {
+display: block;
+float: none;
+width: 100%;
+margin-top: 20px;
+}
+	
+	
+/* FILM */
+
+#thumbs > ul > li {
+display: inline-block;
+float: left;
+width: 300px;
+height: 220px;
+padding: 0px;
+overflow: hidden;
+opacity: 1;
+transition: .2s;
+-webkit-transition: .2s;
+}
+
+#mov-expand {
+height: 50px;
+display: block;
+width: 290px;
+margin: 0px auto 0px;
+text-align: center;
+font-size: 15px;
+font-family: 'arial';
+color: #fff;
+background-color: rgba(0,0,0,.8);
+line-height: 50px;
+border-radius: 5px;
+box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+cursor: pointer;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+#filmgalleri div.yt-plist {
+width: 300px;
+}
+
+#filmgalleri ul.plist-videos {
+width: 300px;
+}
+
+/* BILLEDER */
+
+#billeder > div > div {
+width: 300px;
+margin: auto;
+}
+
+#billeder div.wrap-940 {
+padding: 0;
+width: 300px;
+}
+
+.picture-frame {
+display: inline-block;
+width: 125px;
+margin: 0px;
+height: 125px;
+overflow: hidden;
+padding: 10px;
+float: left;
+}
+
+#billeder .pic-more {
+position: relative;
+float: left;
+display: inline-block;
+width: 135px;
+height: 135px;
+background: #000;
+margin: 10px 0px 10px 10px;
+line-height: 138px;
+font-size: 40px;
+text-align: center;
+color: #fff;
+cursor: pointer;
+transition: .2s;
+-webkit-transition: .2s;
+}
+
+/* Kalender */
+
+div.date-box {
+text-align: center;
+width: 70px;
+height: 70px;
+background: #efefef;
+line-height: 1;
+}
+div.date-box > span.dname {
+display: block;
+font-family: arial-black;
+font-size: 20px;
+margin: 15px auto 5px;
+text-transform: uppercase;
+}
+div.date-box > span.dnum {
+font-family: 'arial';
+display: inline-block;
+font-size: 15px;
+}
+div.date-box > span.mname {
+display: inline-block;
+font-family: 'arial';
+text-transform: uppercase;
+font-size: 15px;
+}
+div.img-box {
+height: 70px;
+width: 200px;
+margin-left: 10px;
+text-align: center;
+font-family: 'arial';
+overflow: hidden;
+background-image: url(http://klartilfilm.dk/wp-content/uploads/2014/03/calendar.jpg);
+background-position: center;
+background-repeat: no-repeat;
+}
+div.title-box {
+cursor: pointer;
+height: 70px;
+background: #efefef;
+width: 270px;
+margin-left: 0px;
+margin-top: 10px;
+padding-left: 10px;
+}
+div.title-box h4 {
+margin-top: 18px;
+font-size: 18px;
+font-family: 'arial';
+}
+div.title-box span {
+font-size: 13px;
+font-family: 'arial';
+}
+div.title-box > span.title-exp-ind {
+position: absolute;
+display: block;
+height: 20px;
+width: 20px;
+background-image: url(http://klartilfilm.dk/wp-content/uploads/2014/03/updwn.png);
+background-position: 0px -20px;
+background-repeat: no-repeat;
+background-size: 20px;
+margin-left: 240px;
+margin-top: -25px;
+opacity: 0;
+transition: .2s;
+-webkit-transition: .2s;
+}
+div.cal-entry>div.descr-box {
+display: inline-block;
+clear: both;
+float: right;
+width: 240px;
+margin: 10px 0px 0px 340px;
+padding: 20px;
+background: #efefef;
+display: none;
+}
+#cal-expand {
+height: 50px;
+display: block;
+width: 280px;
+margin: 10px auto 0px;
+text-align: center;
+font-size: 15px;
+font-family: 'arial';
+color: #fff;
+background-color: rgba(0,0,0,.8);
+line-height: 50px;
+border-radius: 5px;
+box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+cursor: pointer;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+/* UNDERVISERE */
+	
+	.u-cont, .u-cont.third {
+	width: 130px;
+	margin: 0px 10px 20px 0px;
+	}
+	
+	.u-pic {
+	width: 130px;
+	height: 130px;
+	}
+	
+	.u-name {
+	margin: 10px 0px 5px;
+	font-family: 'arial-black';
+	color: #fff;
+	font-size: 13px;
+	text-decoration: none;
+	}
+
+/* KONTAKT */
+#kontakt > div > article > h1 {
+text-align: center;
+}
+
+
+#kontakt > div > article > div.footer-widget.footer-left-widget {
+text-align: center;
+}
+
+div.footer-widget.footer-right-widget {
+position: relative;
+margin-left: auto;
+top: 0;
+width: 280px!Important;
+}
+
+.breaking-news{
+	display:none!important;
+	}
+
+
+	
+	}
+	
+	
+
+
+
+/* PRINT */
+
+
+@media print {
+  #cal-expand{
+	  display:none;
+	  }
+}
