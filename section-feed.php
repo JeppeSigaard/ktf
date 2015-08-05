@@ -44,7 +44,7 @@ endforeach;
 ?>
 <section id="om">
 	<div class="wrap-920">
-    	<h1>Om os</h1>	
+    	<h3>Om os</h3>	
 		<?php echo $info_page; // Indsæt om-side ?> 
         <div id="all-news">
         </div>

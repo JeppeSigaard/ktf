@@ -26,9 +26,14 @@
     
    <!-- Undervisere -->
    <?php get_template_part('section','undervisere') ?>
+   
+   <!-- Formular -->
+   <?php get_template_part('section','kontaktformular'); ?>
     
    <!-- Kontakt -->
    <?php get_template_part('section','kontakt'); ?>
+   
+   
    
 </section>
 <?php get_footer(); ?>

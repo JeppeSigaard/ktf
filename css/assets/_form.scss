@@ -1,0 +1,461 @@
+$input-padding:4px 0px;
+$input-transition-time:100ms;
+$input-font-size:15px;
+$label-active-size:15px;
+$input-border-width:1px;
+$monkey-white:#fff;
+$monkey-light:#f0f0f0;
+$monkey-green:#5da535;
+$monkey-red:#c94848;
+$monkey-black:#333;
+$monkey-black-2:#353535;
+$base-margin:10px;
+$base-shadow:1px 1px 1px rgba(black,.1);
+$button-shadow:1px 1px 1px rgba(black,.1);
+
+:invalid {
+  box-shadow: none;
+}
+
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+
+:-moz-ui-invalid {
+  box-shadow:none;
+}
+
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $monkey-light inset;
+}
+
+.sheeted-form input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $monkey-white inset;
+}
+
+
+
+%label-up{
+    font-size: $input-font-size / 1.3;
+    top:-$label-active-size * 1.2;
+    line-height:$label-active-size;
+    opacity:.7;
+}
+
+form.sheeted-form{
+    padding:$base-margin*2;
+    background:$monkey-white;
+    box-shadow: $base-shadow;
+    margin:auto;
+}
+form{
+    position:relative;
+    line-height: 1;
+    box-sizing: border-box;
+    
+    *{
+        box-sizing: inherit;
+    }
+    
+    &.small{
+        max-width:320px;
+        margin:auto;
+    }
+    
+    &.smaller{
+        max-width:220px;
+        margin:auto;
+    }
+    
+    .spacer{
+        position:relative;
+        display: block;
+        height: 0px;
+        margin: $base-margin 0px;
+        border-bottom: $input-border-width dashed rgba($monkey-black,.3);
+    }
+    
+    >div,.split>div,>p{
+        position:relative;
+        font-size:$input-font-size;
+        margin-top:$label-active-size + $base-margin;
+    }
+    
+    .split{
+        margin-top:0;
+        font-size:0;
+        
+        >div{
+        
+            @media only screen and(min-width:640px){
+            
+                display: inline-block;
+                width:50%;
+                
+                &:first-child{
+                    padding-right:$base-margin;
+                }
+                
+                &.small{
+                    width:33.3333%;
+                }
+                
+                &.large{
+                    width:66.6666%;
+                }
+            }
+        }
+    }
+    
+    label{
+        @extend %fill-all;
+        z-index:1;
+        padding:$input-padding;
+        font-size: $input-font-size;
+        height:inherit;
+        top:0;
+        transition:font-size $input-transition-time, top $input-transition-time, height $input-transition-time, opacity $input-transition-time,;
+        opacity:.9;
+        font-weight:400;
+        color:$monkey-black-2;
+        
+        &.stayup{
+            @extend %label-up;
+        }
+    
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    input[type="number"],
+    textarea{
+        
+        position:relative;
+        z-index:2;
+        background:transparent;
+        resize: none;
+        font-family: inherit;
+        border:solid rgba($monkey-black-2,.2);
+        border-width:0px 0px $input-border-width;
+        outline:none;
+        transition:border $input-transition-time;
+        padding:$input-padding;
+        font-size: $input-font-size;
+        font-weight: 400;
+        color:inherit;
+        box-sizing: border-box;
+        width:100%;
+        border-radius:0;
+        
+        
+        &:focus{
+            border:solid rgba($monkey-black,.6);
+            border-width:0px 0px $input-border-width;
+            
+            + label{
+                @extend %label-up;
+            }
+        }
+        
+        &.success{
+            border-bottom-color:$monkey-green;
+        }
+        
+        &.error{
+            color:$monkey-red;
+            border-bottom-color:$monkey-red;
+            
+            & + label{
+                color:$monkey-red;
+            }
+        }
+    
+    }
+    
+    /* SELECT */
+    $select-width:100%;
+    $select-height:$base-margin * 2.5;
+    $select-background:$monkey-light;
+    $select-color:$monkey-black;
+
+    .select {
+        cursor: pointer;
+        position: relative;
+        z-index: 3;
+        display:block;
+        color: $select-color;
+        width: $select-width;
+        height: $select-height;
+    }
+
+    .select-hidden{
+        display: none;    
+    }
+
+    .select-styled {
+        position: absolute;
+        border-bottom: $input-border-width solid rgba($monkey-black,.2);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+        transition:background-color $input-transition-time, border-bottom $input-transition-time;
+        //padding: 0px 15px;
+        height:$select-height;
+        line-height:$select-height;
+
+        &.success{
+            border-bottom: $input-border-width solid $monkey-green;
+            font-weight: 400;
+        }
+
+        &:after {
+            content:"";
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-color: rgba($select-color,.5) transparent transparent transparent;
+            position: absolute;
+            top: 13px;
+            right: $base-margin;
+        }
+        &:hover {
+            //background-color: darken($select-background, 2);
+        }
+        &:active, &.active {
+            //background-color: darken($select-background, 5);
+            &:after {
+              top: 7px;
+              border-color: transparent transparent $select-color transparent;
+            }
+        }
+    }
+
+    .select-options {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        top:$select-height;
+        box-shadow: $button-shadow;
+        z-index: 999;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: $select-background;
+        li {
+            margin: 0;
+            padding: $base-margin * .8 0;
+            text-indent: $base-margin;
+            font-weight: 400;
+            //border-top: 1px solid darken($select-background, 10);
+            transition:background-color $input-transition-time, color $input-transition-time;
+
+            &:hover {
+                background: darken($select-background,5);
+            }
+
+            &[rel="hide"] {
+                display: none;
+            }
+        }
+    }
+    
+    /* CHECKBOX */
+    $checkbox-size: 20px;
+    
+    
+    input[type="checkbox"]{
+        
+        position:relative;
+        display: block;
+        height:$checkbox-size;
+        width:$checkbox-size;
+        outline: none;
+        cursor: pointer;
+        margin:0;
+        
+        &:after{
+            content:'';
+            @extend %fill-all;
+            background: $monkey-light;
+            border:$input-border-width solid rgba($monkey-black,.5);
+            transition: background $input-transition-time, border $input-transition-time;
+            border-radius:2px;
+        
+        }
+    
+        &:checked:after{
+            content:'\2713';
+            border:$input-border-width solid $monkey-green;
+            background:$monkey-green;
+            color:$monkey-white;
+            line-height: $checkbox-size - 4;
+            text-align: center;
+            font-size: 120%;
+        }
+        
+        
+        &:checked + label{
+            //color:$monkey-green;
+        }
+        
+        & + label{
+            left:$checkbox-size * 1.5;
+            height:$checkbox-size - 8;
+            line-height: $checkbox-size - 8;
+            top:0;
+            transition: color $input-transition-time;
+        }
+    }
+    
+    /* RANGE */
+    
+    $range-size:18px;
+    $range-size-active:22px;
+    
+    
+    input[type="range"] {
+        position:relative;
+        cursor:pointer;
+        z-index:2;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        width: 100%;
+        height: 5px;
+        margin: 0;
+        border: none;
+        padding: 1px 2px;
+        background: rgba($monkey-black,.3);
+        outline: none; /* no focus outline */
+        
+        
+        & + label{
+            opacity:.7;
+        }
+    }
+
+    input[type="range"]::-moz-range-track {
+        border: inherit;
+        background: transparent;
+    }
+
+    input[type="range"]::-ms-track {
+        border: inherit;
+        color: transparent; /* don't drawn vertical reference line */
+        background: transparent;
+    }
+
+    input[type="range"]::-ms-fill-lower,
+    input[type="range"]::-ms-fill-upper {
+        background: transparent;
+    }
+
+    input[type="range"]::-ms-tooltip {
+        display: none;
+    }
+
+    /* thumb */
+    
+    @mixin rangeThumb(){
+         -webkit-appearance: none;
+        width:  $range-size;
+        height:  $range-size;
+        border: none;
+        border-radius: 12px;
+        background: $monkey-green;
+        transition:height .1s, width .1s;
+    
+    }
+    
+    @mixin rangeThumbHover(){
+        width:  $range-size-active;
+        height: $range-size-active;
+       
+    
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        @include rangeThumb;
+    }
+    input[type="range"]::-moz-range-thumb {
+        @include rangeThumb;
+    }
+
+    input[type="range"]::-ms-thumb {
+        @include rangeThumb;
+    }
+    
+    input[type="range"]:hover::-webkit-slider-thumb {
+        @include rangeThumbHover;
+        
+    }
+    input[type="range"]:hover::-moz-range-thumb {
+        @include rangeThumbHover;
+    }
+
+    input[type="range"]:hover::-ms-thumb {
+        @include rangeThumbHover;
+    }
+    
+    
+}
+
+a.form-button {
+    padding: 0px $base-margin;
+    height: 35px;
+    line-height: 35px;
+    background-color: $monkey-black;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+    font-size:80%;
+    text-transform: uppercase;
+    font-weight:400;
+    color: white;
+    box-shadow: $button-shadow;
+    transition:background-color 150ms;
+    outline: none;
+    
+    &:hover,&:focus{
+        background-color: lighten($monkey-black,5);
+    }
+    
+    &.success{
+        background-color: $monkey-green;
+        
+        &:hover,&:focus{
+            background-color: darken($monkey-green,5);
+        }
+    }
+    
+    &.error{
+        background-color: $monkey-red;
+        
+        &:hover,&:focus{
+            background-color: darken($monkey-red,5);
+        }
+    }
+    
+    &.other{
+        background-color: transparent;
+        color:$monkey-black-2;
+        box-shadow:none;
+        &:hover,&:focus{
+            text-decoration: underline;
+        }
+    }
+    
+    &.disabled,
+    &.disabled:hover,
+    &.disabled:focus{
+        background-color:#ccc;
+        cursor:default;
+    }
+}
+

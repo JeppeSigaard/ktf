@@ -1,0 +1,115 @@
+/* BILLEDER */
+
+#billeder div.wrap-940 {
+overflow: auto;
+padding: 20px;
+}
+
+#billeder div.facebook-album-container {
+	display: inline-block;
+	float: left;
+	width: 306px;
+	height: 169px;
+	overflow: hidden;
+	margin-bottom: 5px;
+	}
+
+
+#billeder div.facebook-album-wrapper {
+	position: absolute;
+	width: 300px;
+	height: 169px;
+	display:none;
+	}
+	
+#billeder div.facebook-album-wrapper:nth-child(2) {
+display: block;
+}
+
+#billeder .fbalbum .image {
+	box-shadow: none!important;
+	}
+
+#billeder a.fbalbum.cboxElement, #billeder .fbalbum .size-4 {
+width: 300px;
+height: 169px;
+}
+
+#cboxOverlay {
+background: transparent!IMPORTANT;
+}
+
+div.facebook-album-container>h2 {
+position: absolute;
+display: block;
+z-index: 2;
+font-size: 14px;
+width: 280px;
+padding: 10px 10px;
+background: rgba(0,0,0,0.4);
+font-family: 'corbel';
+margin-left: 2px;
+height: 16px;
+overflow: hidden;
+line-height: 20px;
+}
+
+div.facebook-album-container>h2 a{
+color: #fff;
+text-decoration: none;
+}
+
+
+
+#billeder-result .loading{
+	width:100%;
+	height:300px;
+	background-image:url(http://klartilfilm.dk/wp-content/themes/klartilfilm/loaders/load-dark.GIF);
+	background-position:center center;
+	background-repeat:no-repeat;
+	}
+
+@media only screen and(max-width:640px){
+
+    
+    /* BILLEDER */
+
+#billeder > div > div {
+width: 300px;
+margin: auto;
+}
+
+#billeder div.wrap-940 {
+padding: 0;
+width: 300px;
+}
+
+.picture-frame {
+display: inline-block;
+width: 125px;
+margin: 0px;
+height: 125px;
+overflow: hidden;
+padding: 10px;
+float: left;
+}
+
+#billeder .pic-more {
+position: relative;
+float: left;
+display: inline-block;
+width: 135px;
+height: 135px;
+background: #000;
+margin: 10px 0px 10px 10px;
+line-height: 138px;
+font-size: 40px;
+text-align: center;
+color: #fff;
+cursor: pointer;
+transition: .2s;
+-webkit-transition: .2s;
+}
+
+
+}

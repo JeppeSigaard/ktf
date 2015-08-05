@@ -1,0 +1,125 @@
+/* FEED */
+div.about-main>h2{
+	margin-bottom:20px;
+	}
+
+div.about-main>div{
+	width: 460px;
+	display: inline-block;
+	float: left;
+	margin-top: 20px;
+	}
+	
+div.about-main img{
+	width:100%;
+	}
+	
+div.about-main div.about-main-right {
+	width: 420px;
+	margin-left: 40px;
+	height: 300px;
+	}
+
+
+
+div#first-news {
+width: 640px;
+float: left;
+overflow: auto;
+}
+article.lcp_full {
+padding: 20px 40px 20px 20px;
+}
+
+h1.lcp_full_title a {
+text-decoration: none;
+color: #fff;
+margin-bottom: 10px;
+display: block;
+}
+
+div.lcp_full_img {
+background-image: url(http://klartilfilm.dk/wp-content/themes/klartilfilm/loaders/load-light.GIF);
+background-position:center center;
+background-repeat:no-repeat;
+width: 100%;
+/*height: 235px;*/
+height:auto;
+/*overflow: hidden;*/
+margin-bottom:10px;
+margin-top: 15px;
+}
+
+img.attachment-full.wp-post-image, div.lcp_full_img img {
+width: 100%;
+height: auto;
+}
+
+@media only screen and(max-width:960px){
+
+    /* 	FEEED */
+	
+	div.about-main div.about-main-left, div.about-main div.about-main-right {
+	width: 100%!important;
+	margin-left: 0px;
+	height: 370px;
+	}
+	
+	ul.lcp_bottom {
+	width: 640px;
+	}
+	
+	div#more-news {
+	width: 610px;
+	}
+	
+	
+	div#next-3-news {
+	width: 640px;
+	}
+    
+}
+
+
+@media only screen and(max-width:640px){
+    
+    /* FEED */
+	div.about-main div.about-main-right{
+	height: 200px;
+	}
+	div#first-news {
+	width: 280px;
+	float: none;
+	overflow: auto;
+	margin: auto;
+	margin-top: 40px;
+	}
+	
+	div#first-news article.lcp_full {
+	padding: 0;
+	}
+	
+	#all-news {
+	padding-top: 20px;
+	}
+	
+	ul.lcp_bottom {
+	width: 320px;
+	margin-left:-10px;
+	}
+	
+	li.bottom-entry {
+	margin: 20px 20px 20px;
+	height: 290px;
+	}
+	
+	div#more-news {
+	width: 290px;
+	}
+	
+	div#next-3-news {
+	width: 300px;
+	}
+
+
+}

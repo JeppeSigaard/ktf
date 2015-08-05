@@ -1,0 +1,87 @@
+/* Undervisere*/
+#undervisere article>h1{
+	margin-bottom:30px;
+	}
+
+.u-cont {
+	display: inline-block;
+	float: left;
+	width: 280px;
+	overflow: hidden;
+	margin: 0px 40px 30px 0px;
+	text-decoration:none;
+	cursor:default;
+	}
+
+.u-cont.third{
+	margin: 0px 0px 10px 0px;
+	}
+
+.u-pic {
+	width: 270px;
+	height: 270px;
+	overflow: hidden;
+	background-image: url(http://klartilfilm.dk/wp-content/uploads/2014/04/teacher.jpg);
+	}
+
+.u-pic img{
+	width:100%;
+	height:auto;
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	}
+
+.u-name{
+	margin:20px 0px 5px;
+	font-family:'arial-black';
+	color:#fff;
+	font-size:18px;
+	text-decoration:none;
+	}
+.u-desc{
+	font-size:18px;
+	line-height:24px;
+	color:#fff;
+	text-decoration:none;
+	font-family:'arial';
+	}
+
+@media only screen and(max-width:960px){
+    
+    /* UNDERVISERE */
+	
+	.u-cont {
+		width: 170px;
+		}
+	
+	.u-pic {
+		width: 170px;
+		height: 170px;
+		}
+
+}
+
+
+@media only screen and(max-width:640px){
+    
+    /* UNDERVISERE */
+	
+	.u-cont, .u-cont.third {
+	width: 130px;
+	margin: 0px 10px 20px 0px;
+	}
+	
+	.u-pic {
+	width: 130px;
+	height: 130px;
+	}
+	
+	.u-name {
+	margin: 10px 0px 5px;
+	font-family: 'arial-black';
+	color: #fff;
+	font-size: 13px;
+	text-decoration: none;
+	}
+
+}

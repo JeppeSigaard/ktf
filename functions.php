@@ -319,3 +319,6 @@ function my_custom_fonts() {
 	
 	</style>';
 }
+
+
+require 'functions/post-types.php';

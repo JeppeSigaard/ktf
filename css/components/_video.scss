@@ -1,0 +1,360 @@
+/* FILM */
+
+#mov-expand {
+height:60px;
+display: block;
+width: 920px;
+margin: 20px auto 0px;
+text-align: center;
+font-size: 20px;
+font-family: 'arial';
+color: #fff;
+background-color: rgba(0,0,0,.8);
+line-height:60px;
+border-radius: 5px;
+box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+cursor: pointer;
+background-position:center;
+background-repeat:no-repeat;
+
+}
+
+#thumbs {
+display: block;
+padding: 10px;
+overflow: auto;
+clear:both;
+}
+
+#thumbs > ul > li {
+display: inline-block;
+float: left;
+width: 290px;
+height: 160px;
+padding: 10px;
+overflow: hidden;
+opacity: 1;
+transition: .2s;
+-webkit-transition: .2s;
+}
+
+
+#thumbs > ul > li.hidden {
+	width:0px;
+	height:0px;
+	opacity:0;
+	padding:0px;
+	}
+
+#thumbs > ul > li.hidden .image-overlay{
+	display:none;
+	}
+
+#thumbs > ul > li > a {
+width: 280px;
+height: 158px;
+display: block;
+padding: 5px;
+margin: 0px;
+background: rgba(0,0,0,.5);
+}
+
+#thumbs > ul > li> a > .image {
+display: block;
+width: 280px;
+height: 171px;
+overflow: hidden;
+}
+
+#thumbs > ul > li > a > .image > img {
+width: 101%;
+margin-top: -1px;
+}
+
+#thumbs > ul > li > a > span.video-title {
+display: block;
+width: 260px;
+height: 15px;
+padding: 10px 10px;
+font-size: 15px;
+line-height: 15px;
+color: #FFF;
+font-family: 'corbel';
+margin-top: -171px;
+margin-left: 0px;
+position: absolute;
+background: rgba(0,0,0,0.5);
+}
+
+#embed {
+	margin: 20px 20px 0px;
+	background-color: rgba(0,0,0,0.7);
+	background-image:url(http://klartilfilm.dk/wp-content/themes/klartilfilm/loaders/load-light.GIF);
+	background-position:center;
+	background-repeat:no-repeat;
+	width: 920px;
+	margin: auto;
+}
+
+#embed>iframe{
+	margin:10px;
+	}
+
+#meta {
+display: block;
+width: 920px;
+height: 0px;
+background: rgba(0,0,0,0.5);
+margin: 10px 20px 20px;
+overflow:hidden;
+}
+
+.noshow{
+	margin:0px!important;
+	}
+
+
+#meta-kolofon {
+display: inline-block;
+float: left;
+background: rgba(255,255,255,.8);
+width: 285px;
+height:auto;
+margin: 10px;
+}
+
+#meta-description {
+display: inline-block;
+float: left;
+background: rgba(255,255,255,.8);
+width: 595px;
+height:auto;
+margin: 10px;
+}
+
+#meta-description > h2 {
+color: #333;
+margin: 20px 20px 0px;
+font-size: 20px;
+}
+
+
+#meta-description > p {
+margin: 5px 20px 10px;
+color: #333;
+}	
+	
+#thumbs > ul > li > a > span.image-overlay {
+display: block;
+position: absolute;
+background-image: url('http://klartilfilm.dk/wp-content/uploads/2014/03/play-70.png');
+background-position: center;
+background-repeat: no-repeat;
+width: 280px;
+height: 170px;
+margin-top: -170px;
+transition: .3s;
+-webkit-transition: .3s;
+}
+
+#filmgalleri .image-overlay:hover {
+	background-image: url('http://klartilfilm.dk/wp-content/uploads/2014/03/play-95.png');
+	}
+	
+	
+/* PLIST */
+div.plist-head {
+display: block;
+background: rgba(5,5,5,.5);
+overflow: hidden;
+}
+
+.plist-head a.image-overlay, a.pl-image-overlay {
+display: block;
+position: absolute;
+background-color:rgba(55,55,55,.5);
+background-image: url('http://klartilfilm.dk/wp-content/uploads/2014/03/play-70.png');
+background-position: center;
+background-repeat: no-repeat;
+width: 220px;
+height: 124px;
+transition: .3s;
+-webkit-transition: .3s;
+text-align: center;
+line-height: 190px;
+text-decoration: none;
+color: #ddd;
+font-family: 'arial';
+text-transform: uppercase;
+}
+
+
+div.plist-thumb {
+display: inline-block;
+width: 220px;
+height: 124px;
+overflow: hidden;
+float: left;
+}
+
+div.plist-img {
+width:100%;
+}
+
+div.plist-title {
+display: inline-block;
+width: 670px;
+vertical-align: top;
+font-family: 'arial-black';
+font-size: 20px;
+padding: 10px;
+}
+
+div.plist-desc {
+display: inline-block;
+width: 670px;
+font-family: 'arial';
+font-size: 15px;
+line-height: 20px;
+padding: 5px 10px;
+}
+	
+div.yt-plist {
+width: 920px;
+margin: 10px auto;
+}
+
+ul.plist-videos {
+display: block;
+clear: both;
+width: 920px;
+margin: auto;
+overflow: auto;
+background: rgba(5,5,5,.5);
+margin-bottom: 15px;
+}
+
+ul.plist-videos li {
+display: inline-block;
+float: left;
+width: 220px;
+height: 129px;
+overflow: hidden;
+padding: 5px;
+background: rgba(5,5,5,.5);
+}
+	
+ul.plist-videos li img.thumb {
+width: 100%;
+}
+.plist-videos span.image-overlay {
+display: block;
+position: absolute;
+background-image: url('http://www.klartilfilm.dk/wp-content/uploads/2014/03/play-70.png');
+background-position: center;
+background-repeat: no-repeat;
+width: 219px;
+height: 120px;
+margin-top: -125px;
+transition: .3s;
+-webkit-transition: .3s;
+}
+
+.plist-videos span.video-title {
+display: block;
+width: 200px;
+height: 15px;
+padding: 10px 10px;
+font-size: 15px;
+line-height: 15px;
+color: #FFF;
+font-family: 'corbel';
+margin-top: -131px;
+margin-left: 0px;
+position: absolute;
+background: rgba(0,0,0,0.5);
+}
+
+@media only screen and(max-width:960px){
+
+    /* VIDEO */
+	
+	#filmgalleri div.yt-plist {
+	width: 600px;
+	}
+	
+	#filmgalleri div.plist-title {
+	width: 580px;
+	}
+	
+	#filmgalleri ul.plist-videos {
+	width: 600px;
+	}
+	
+	#filmgalleri ul.plist-videos li {
+	width: 290px;
+	height: 159px;
+	}
+	
+	#filmgalleri .plist-videos span.image-overlay {
+	width: 290px;
+	height: 159px;
+	margin-top: -159px;
+	}
+	
+	#filmgalleri .plist-videos span.video-title {
+	width: 270px;
+	height: 15px;
+	padding: 10px 10px;
+	color: #FFF;
+	margin-top: -166px;
+	position: absolute;
+	}
+    
+}
+
+
+
+@media only screen and(max-width:640px){
+
+    /* FILM */
+
+#thumbs > ul > li {
+display: inline-block;
+float: left;
+width: 300px;
+height: 220px;
+padding: 0px;
+overflow: hidden;
+opacity: 1;
+transition: .2s;
+-webkit-transition: .2s;
+}
+
+#mov-expand {
+height: 50px;
+display: block;
+width: 290px;
+margin: 0px auto 0px;
+text-align: center;
+font-size: 15px;
+font-family: 'arial';
+color: #fff;
+background-color: rgba(0,0,0,.8);
+line-height: 50px;
+border-radius: 5px;
+box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+cursor: pointer;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+#filmgalleri div.yt-plist {
+width: 300px;
+}
+
+#filmgalleri ul.plist-videos {
+width: 300px;
+}
+
+}

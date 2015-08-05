@@ -6,11 +6,11 @@
     <link rel="icon" href="ktf.ico" type="image/x-icon"> 
 	<link rel="shortcut icon" href="ktf.ico" type="image/x-icon"> 
     <title><?php wp_title( ' | ', true, 'right' ); ?></title>
-    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/main.css" />
     <?php wp_head(); ?>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="<?php echo bloginfo('template_directory'); ?>/js/main.js"></script>
+    <script src="<?php echo bloginfo('template_directory'); ?>/js/main.min.js"></script>
     <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -22,7 +22,7 @@
 	</script>
     <link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/font/font.css"/>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-base-url="<?php echo get_bloginfo('url') ?>">
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="0" width="0">
 	  <defs>
 		 <filter id="blur" x="0" y="0">

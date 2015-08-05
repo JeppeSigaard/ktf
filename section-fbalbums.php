@@ -13,7 +13,7 @@
 <section id="billeder">
 	<div class="wrap-960">
     	<div class="wrap-940">
-        	<h1 style="margin-left:10px;">Billeder</h1>
+        	<h3 style="margin-left:10px;">Billeder</h3>
             <div id="myAlbum"></div>
             <div class="pic-more">+</div>
         </div>

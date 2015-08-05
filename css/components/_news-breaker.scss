@@ -1,0 +1,129 @@
+/* Newsbreaker */
+
+@keyframes blink{
+	0%{opacity:0;}
+	50%{opacity:1;}
+	100%{opacity:0;}
+	}
+
+@-webkit-keyframes blink{
+	0%{opacity:0;}
+	50%{opacity:1;}
+	100%{opacity:0;}
+	}
+
+body{
+	background:#333;
+	}
+	
+.breaking-news {
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	background: rgba(0,0,0,.9);
+	width: 100%;
+	left: 0;
+	height: 30px;
+	padding-top: 10px;
+	z-index: 1200;
+	transform:translate3d(0,0,0);
+	-webkit-transform:translate3d(0,0,0);
+	display:none;
+	}
+
+span.exclm {
+	opacity: 0;
+	vertical-align: top;
+	display: inline-block;
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
+	color: #fff;
+	text-align: center;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-family: 'arial';
+	}
+
+span.exclm.blinking{
+	animation:infinite linear .1s blink;
+	-webkit-animation:infinite linear .1s blink;
+	}
+
+span.exclm.shown{
+	opacity:1;
+	}
+
+span.news-title {
+	position:relative;
+	vertical-align: text-bottom;
+	display: inline-block;
+	width:0px;
+	height:40px;
+	overflow:hidden;
+	}
+
+span.news-title span {
+	position: absolute;
+	height: 20px;
+	width: 900px;
+	overflow: visible;
+	left: 0px;
+	text-align: left;
+	margin-top: 2px;
+	}
+
+span.news-title h3 {
+display: inline-block;
+color: #fff;
+height: 15px;
+line-height: 15px;
+font-size: 15px;
+margin: 0px 0px;
+font-family: 'arial';
+padding: 0px 5px;
+}
+
+span.news-title a {
+	text-decoration: none;
+	color: #fff;
+	}
+	
+.breaking-ctrl {
+	display:block;
+	width: 50px;
+	height: 30px;
+	margin-top: -10px;
+	position: absolute;
+	cursor: pointer;
+	transition: .2s;
+	-webkit-transition: .2s;
+	color: #fff;
+	text-align: center;
+	padding-top: 10px;
+	text-decoration:none;
+	}
+
+.breaking-ctrl:hover {
+	color:#000;
+	background:rgba(255,255,255,.6);
+	}
+
+
+	
+div.breaking-ctrl.breaking-close {
+	right: 0;
+	}
+div.breaking-ctrl.breaking-close:before {
+content: "\f335";
+font: normal 25px/1 'dashicons';
+}
+	
+.breaking-ctrl.breaking-read {
+right: 50px;
+}
+.breaking-ctrl.breaking-read:before {
+content: "\f139";
+font: normal 25px/1 'dashicons';
+}	
+	

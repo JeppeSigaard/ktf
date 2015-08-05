@@ -1,0 +1,210 @@
+.wrap-960{
+	width:960px;
+	margin:auto;
+	}
+	
+.wrap-920{
+	width:920px;
+	margin:auto;
+	}
+
+body{
+	background:#333;
+	z-index:1;
+	font-family:'arial';
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	}
+	
+div.page-content {
+background: rgba(255,255,255,.8);
+padding: 60px 0px;
+}
+
+.included-content section article>h1 {
+display: none;
+}
+	
+	
+h1,h2,h3{
+	font-family:'arial-black';
+	line-height:120%;
+	margin-bottom:10px;
+	}
+h1{font-size:40px;}
+h2{font-size:28px;}
+h3{font-size:40px;}
+
+p, .post-content{
+	font-family:'arial';
+	font-size:18px;
+	line-height:26px;
+	margin-bottom:10px;
+	}
+
+.page-dark, .page-dark h1, .page-dark h2, .page-dark h3, .page-dark p, page-dark .post-content{
+	color:#fff;
+	}
+
+strong{
+	font-family:'arial-black';
+	}
+	
+	
+article{
+	padding:20px;
+	}	
+article h1.article-title{
+	margin-bottom:30px;
+	}
+
+.hidden{
+	display:none;
+	}
+	
+img {
+width: 100%;
+}
+
+section{
+	display:block;
+	position:relative;
+	z-index:1;
+	overflow:auto;
+	}
+
+#front-page{
+	overflow:hidden;
+	}	
+
+#om{
+	min-height:300px;
+	padding:40px 0px 100px;
+	background-color:rgba(0,0,0,.8);
+	color:#fff;
+	}
+
+#filmgalleri{
+	min-height:300px;
+	padding:40px 0px 100px;
+	background-color:rgba(51,51,51,.8);
+	}
+
+#billeder{
+	min-height:300px;
+	padding:40px 0px 100px;
+	background-color:rgba(255,255,255,.8);
+	}
+	
+#kalender{
+	min-height:300px;
+	padding:40px 0px 100px;
+	background-color:#333;
+	}
+
+#undervisere{
+	min-height:300px;
+	padding:40px 0px 100px;
+	background-color:rgba(153,153,153,.8);
+	}
+
+#kontakt{
+	min-height:300px;
+	padding:40px 0px 100px;
+	background-color:rgba(255,255,255,.8);
+	}
+
+@media only screen and(max-width:960px){
+
+
+    .wrap-960{
+		width:640px;
+		}
+	
+	.wrap-920{
+		width:600px;
+		}
+	
+	#mov-expand, #cal-expand {
+		width:600px;
+		}
+	
+	#billeder div.wrap-940 {
+		overflow: auto;
+		padding: 17px;
+		width: 620px;
+		}
+}
+
+@media only screen and(max-width:640px){
+    
+    img#background-video{
+		min-height: 0px;
+		height: auto;
+		min-width: 0px;
+		width: 890px;
+		}
+	
+	.wrap-960 {
+	width: 320px;
+	}
+	
+	div.wrap-920 {
+	width: 300px;
+	}
+    
+    
+	
+	article h1.article-title {
+		margin-bottom: 10px;
+		}
+		
+	h1{font-size:25px;}
+	h2{font-size:15px;}
+	h3{font-size:25px;}
+	p, .post-content {
+	font-family: 'arial';
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 10px;
+	}
+    
+    
+    /* Sektioner */
+	
+	#om {
+		min-height: 300px;
+		padding: 20px 0px 50px;
+		}
+		
+	#filmgalleri{
+		min-height:300px;
+		padding: 20px 0px 50px;
+		background-color:rgba(51,51,51,.8);
+		}
+
+	#billeder{
+		min-height:300px;
+		padding: 20px 0px 50px;
+		background-color:rgba(255,255,255,.8);
+		}
+		
+	#kalender{
+		min-height:300px;
+		padding: 20px 0px 50px;
+		background-color:#333;
+		}
+	
+	#undervisere{
+		min-height:300px;
+		padding: 20px 0px 50px;
+		background-color:rgba(153,153,153,.8);
+		}
+	
+	#kontakt{
+		min-height:300px;
+		padding: 20px 0px 50px;
+		background-color:rgba(255,255,255,.8);
+		}
+
+}

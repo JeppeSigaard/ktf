@@ -1,0 +1,58 @@
+/* Top menu */
+ul#menu-topbarens-menu {
+box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+}
+
+#top-menu {
+position: relative;
+float: right;
+height: 0px;
+overflow:hidden;
+top: 50px;
+right: -30px;
+transition:.3s;
+-webkit-transition:.3s;
+-ms-transition:.3s;
+}
+
+#top-menu.shown{
+	height:500px;
+	
+	}
+
+#top-menu a {
+	display: block;
+	width: 155px;
+	height: 48px;
+	line-height: 42px;
+	background-image: url(http://klartilfilm.dk/wp-content/uploads/2014/04/film_strip.png);
+	color: #fff;
+	font-family: 'arial';
+	text-align: center;
+	font-size: 14px;
+	background-color: rgba(55,55,55,0.9);
+	}
+
+#top-menu-expand {
+position: fixed;
+display: block;
+background: url(http://klartilfilm.dk/wp-content/uploads/2014/04/menu-snippet1.png);
+width: 177px;
+height: 114px;
+margin-left: -23px;
+cursor:pointer;
+}
+
+#top-menu-expand {
+position: relative;
+float: right;
+margin-right: 20px;
+display: block;
+background-color: #000;
+background-image: url(http://klartilfilm.dk/wp-content/uploads/2014/04/menu.png);
+width: 55px;
+background-repeat: no-repeat;
+background-position: center;
+height: 50px;
+cursor: pointer;
+}
